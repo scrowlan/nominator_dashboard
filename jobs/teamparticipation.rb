@@ -1,21 +1,21 @@
 require 'net/http'
 require 'json'
 
-team_participation = [{"Team"=>"Ada","Participation"=>56},
-{"Team"=>"Ajax","Participation"=>38},
-{"Team"=>"Architect","Participation"=>2},
-{"Team"=>"Apollo","Participation"=>8},
-{"Team"=>"Argus","Participation"=>14},
-{"Team"=>"Atlas","Participation"=>87},
-{"Team"=>"Management","Participation"=>0},
-{"Team"=>"Avalon","Participation"=>24},
-{"Team"=>"Nine","Participation"=>37},
-{"Team"=>"PM","Participation"=>0},
-{"Team"=>"Research","Participation"=>0},
-{"Team"=>"PO","Participation"=>0},
-{"Team"=>"ScrumMaster","Participation"=>63},
-{"Team"=>"Tron","Participation"=>68},
-{"Team"=>"Zeus","Participation"=>11}].to_json
+team_participation = [{"Team"=>"Ada","Participation"=>57},
+{"Team"=>"Ajax","Participation"=>34},
+{"Team"=>"Architect","Participation"=>3},
+{"Team"=>"Apollo","Participation"=>15},
+{"Team"=>"Argus","Participation"=>22},
+{"Team"=>"Atlas","Participation"=>60},
+{"Team"=>"Management","Participation"=>4},
+{"Team"=>"Avalon","Participation"=>47},
+{"Team"=>"Nine","Participation"=>45},
+{"Team"=>"PM","Participation"=>2},
+{"Team"=>"Research","Participation"=>3},
+{"Team"=>"PO","Participation"=>2},
+{"Team"=>"ScrumMaster","Participation"=>67},
+{"Team"=>"Tron","Participation"=>65},
+{"Team"=>"Zeus","Participation"=>7}].to_json
 
 parsed = JSON.parse team_participation
 
