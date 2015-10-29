@@ -1,0 +1,56 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":4,"row":2,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":3},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":5,"row":1,"size_x":1,"size_y":3},{"col":1,"row":3,"size_x":1,"size_y":1}]')
+
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+  <div data-id="picture" data-view="Image" data-image="http://company.nokia.com/sites/default/files/styles/gallery_image_small/public/gallery/images/here_logo_800x800.jpg"
+    style="background-color:transparent;"
+    data-max="true"
+  ></div>
+</li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="nominator" data-view="Nominator"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="company_participation" data-view="Hotness" data-title="Company Participation" data-moreinfo="last 30 days" data-min="0" data-max="100" data-warm="66" data-cool="33"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div class="good-background-color" data-id="team_participation" data-view="Hotness"  data-moreinfo="last 30 days" data-min="0" data-max="100" data-warm="66" data-cool="33"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+      <div data-id="counter" data-view="List" data-unordered="true" data-title="Top nominations" data-moreinfo="# of nominations"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="bof" data-view="Text" data-title="Next BoF" data-text="2014 Rolex Middlesea Yacht Race -Wally" data-moreinfo="10/28/2015"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+      <div data-id="bof" data-view="Text" data-title="Company Activities" data-text="My spiritual journey to Mecca -Mo" data-moreinfo="10/28/2015" style="background-color:#47bbb3;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="company_morale" data-view="Hotness" data-title="Company Morale" data-min="0" data-max="10" data-warm="7.5" data-cool="4.5"></div>
+    </li>
+  </ul>
+</div>
