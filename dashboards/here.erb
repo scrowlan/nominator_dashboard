@@ -1,8 +1,9 @@
 <script type='text/javascript'>
 $(function() {
-Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":2},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1}]')
+Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":1,"row":2,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":2},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1}]')
 });
 </script>
+
 <% content_for :title do %>Here Dashboard<% end %>
 <div class="gridster">
   <ul>
@@ -10,12 +11,8 @@ Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":4,"row":
       <div data-id="nominator" data-view="Nominator"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="company_participation" data-view="Hotness" data-title="Company Morale Participation" data-moreinfo="last 30 days" data-min="0" data-max="100" data-warm="66" data-cool="33"></div>
-    </li>
-
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div class="good-background-color" data-id="team_participation" data-view="Hotness"  data-moreinfo="last 30 days" data-min="0" data-max="100" data-warm="66" data-cool="33"></div>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="twitter_mentions" data-view="Comments" data-title="Agile Quote of the Day" style="background-color: #71388a"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
