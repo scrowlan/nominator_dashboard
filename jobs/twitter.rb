@@ -4,24 +4,24 @@ require 'twitter'
 #### Get your twitter keys & secrets:
 #### https://dev.twitter.com/docs/auth/tokens-devtwittercom
 twitter = Twitter::REST::Client.new do |config|
-  config.consumer_key = 'YOUR_CONSUMER_KEY'
-  config.consumer_secret = 'YOUR_CONSUMER_SECRET'
-  config.access_token = 'YOUR_OAUTH_TOKEN'
-  config.access_token_secret = 'YOUR_OAUTH_SECRET'
+  config.consumer_key = 'TllPEw1xHAGM6FIcBo334MFPo'
+  config.consumer_secret = 'zBif3pmG5nlGrtdg49vJoEPRnWNzFajenKDXXVPS91KAfnp4u9'
+  config.access_token = '19160753-3NYOTXSqLri9OxDNVjo3SB0DqBLcPJ7JiPWcEaZWj'
+  config.access_token_secret = 'fRlV65O6eAOdTsXyEWwR2Jq5dFmZQqc4iEhbJF2yBfMmQ'
 end
 
-search_term = URI::encode('#todayilearned')
 
-SCHEDULER.every '10m', :first_in => 0 do |job|
+SCHEDULER.every '1d', :first_in => 0 do |job|
   begin
-    tweets = twitter.search("#{search_term}")
+    tweets = twitter.user_timeline("agilequote")
 
     if tweets
-      tweets = tweets.map do |tweet|
-        { name: tweet.user.name, body: tweet.text, avatar: tweet.user.profile_image_url_https }
+      tweets.map! do |tweet|
+        { name: tweet.text, body: tweet.user.screen_name }
       end
       send_event('twitter_mentions', comments: tweets)
     end
+
   rescue Twitter::Error
     puts "\e[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.\e[0m"
   end
