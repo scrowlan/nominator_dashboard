@@ -13,7 +13,7 @@ class Dashing.Comments extends Dashing.Widget
     @currentIndex = 0
 
   startCarousel: ->
-    setInterval(@nextComment, 3600000)
+    setInterval(@nextComment, 7200000)
 
   nextComment: =>
     comments = @get('comments')

@@ -6,6 +6,7 @@ $good-background-color: #336633;
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
+$textbody-color:    rgba(255, 255, 255, 0.7);
 
 // ----------------------------------------------------------------------------
 // Widget-text styles
@@ -21,6 +22,14 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .more-info {
     color: $moreinfo-color;
+  }
+
+  .text {
+    font-weight: 700;
+  }
+
+  .text-body {
+    color:$textbody-color;
   }
 
   .updated-at {
