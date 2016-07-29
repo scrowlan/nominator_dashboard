@@ -1,0 +1,45 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #124191;
+
+$nominee-color:       rgba(255, 255, 255, 0.7);
+$reason-color:    rgba(255, 255, 255, 0.7);
+$nominator-color: rgba(255, 255,255, .7);
+
+// ----------------------------------------------------------------------------
+// Widget-nominator styles
+// ----------------------------------------------------------------------------
+.widget-nominator {
+
+  background-color: $background-color;
+
+  .activity {
+    color: $nominee-color;
+    font-size: 40px;
+    font-style: bold;
+  }
+
+  .name {
+    color: $reason-color;
+  }
+
+  .nominator {
+    color: $nominator-color;
+    float: right;
+    font-style: italic;
+  }
+
+  .comment-container {
+    display: none;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+
+  &.large h3 {
+    font-size: 65px;
+  }
+}

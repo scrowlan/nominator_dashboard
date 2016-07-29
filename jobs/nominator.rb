@@ -8,7 +8,7 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
   
   SCHEDULER.every '2m', :first_in => 0 do |job|
     random = website.sample
-    random_nomination = []
+    #random_nomination = []
     
     # random_nomination << { text: random['reason'], moreinfo: random['nominator'] }
     reason = random['reason']
