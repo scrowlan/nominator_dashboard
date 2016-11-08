@@ -11,9 +11,9 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
     random_nomination = []
     
     # random_nomination << { text: random['reason'], moreinfo: random['nominator'] }
-    reason = random['title']
-    fname = random['name']
-    nominator = random['date']
+    title = random['title']
+    presenter = random['name']
+    date = random['date']
    # nominator = random['nominator']
    # fname = random['employee']['fname']
     #lname = random['employee']['lname']
@@ -23,7 +23,7 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
     #  nominator = "anonymous"
     #end
 
-    send_event('bof', { reason: reason, fname: fname, nominator: nominator} )
+    send_event('bof', { title: title, presenter: presenter, date: date} )
 
   end
 
