@@ -1,37 +1,37 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #124191;
+$background-color: #639112;
 
-$nominee-color:       rgba(255, 255, 255, 0.7);
-$reason-color:    rgba(255, 255, 255, 0.7);
-$nominator-color: rgba(255, 255,255, .7);
+$presenter-color: rgba(255, 255, 255, 0.7);
+$title-color: rgba(255, 255, 255, 0.7);
+$date-color: rgba(255, 255, 255, .7);
 
 // ----------------------------------------------------------------------------
-// Widget-nominator styles
+// Widget-bof styles
 // ----------------------------------------------------------------------------
-.widget-nominator {
+.widget-bof {
 
   background-color: $background-color;
 
-  .nominee {
-    color: $nominee-color;
+  .presenter {
+    color: $presenter-color;
     font-size: 40px;
     font-style: bold;
   }
 
-  .reason {
-    color: $reason-color;
+  .title {
+    color: $title-color;
   }
 
-  .nominator {
-    color: $nominator-color;
+  .date {
+    color: $date-color;
     float: right;
     font-style: italic;
   }
 
-  // .nominator-container {
-  //  display: none;
+  // .bof-container {
+  //   display: none;
   // }
 
   .updated-at {
